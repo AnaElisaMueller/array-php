@@ -2,7 +2,7 @@
 
 function linhas(array $matriz): int{
 
-    return $aij =  (int) readline("quantas linhas na matriz?");
+    return $aij =  (int) readline("quantas linhas na matriz? ");
     
 }
 ?>
