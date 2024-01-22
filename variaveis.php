@@ -2,6 +2,6 @@
 
 $matriz =  [];
 
-$continuar = false;
+$isMatriz = false;
 
 ?>

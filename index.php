@@ -3,10 +3,10 @@
 require_once __DIR__. '/variaveis.php';
 require_once __DIR__. '/linhas.php';
 require_once __DIR__. '/colunas.php';
-require_once __DIR__. '/readMatriz.php';
 require_once __DIR__. '/calculo.php';
 require_once __DIR__. '/imprimir.php';
-require_once __DIR__. '/continuar.php';
+require_once __DIR__. '/isMatriz.php';
+
 
 echo "Calculo entre duas matrizes. \n \n ";
 //quadrada ou não quadrada
@@ -22,14 +22,15 @@ $matriz[$i]['numeros'][$l][$c] = readline("Digite os numeros da matriz". $i .": 
     }
 }
 }
-//isMatriz();//passar paramentros
-print_r($matriz);
-echo "resultado";
-//$validar = isMatriz($matriz);
 
+//print_r($matriz);
+echo "resultado: \n";
+$validar = isMatriz($matriz);
 
+if ($validar == true){
 //calculo
 $matriz[2]['numeros'] = calculo($matriz);
 imprimir($matriz);
+} else {    echo "não é matriz, encerrando programa \n";}
 
 ?>
